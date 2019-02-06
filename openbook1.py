@@ -8,11 +8,10 @@ def list_ifname_ip():
 		if("nameif" in line):
 			temp_key = line.split()
 			if("nameif"!= temp_key[1]):
-				print(temp_key[1])
+				pass
 		if("ip address" in line):
 			temp_ip = line.split()
 			if("ip"== temp_ip[0]):
-				print(temp_ip[2:])
-	config_key
-
+				config_key.setdefault(temp_key[1],(temp_ip[2],temp_ip[3]))
+	print(config_key)
 list_ifname_ip()
