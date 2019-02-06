@@ -1,6 +1,6 @@
 def replace_ip():
 	fout = open("running-config.cfg","r")
-	fin = open("replaced_running_config.txt","a")
+	fin = open("replaced_running_config.txt","w+")
 	for line in fout:
 		if("address" in line and "." in line):
 			line = line.split()
